@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+@font-face {
+    font-family: no;
+    src: url(../font/Nixie-One.ttf);
+}
+@font-face {
+    font-family: osr;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: osb;
+    src: url(../font/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: oseb;
+    src: url(../font/OpenSans-ExtraBold.ttf);
+}
+.bgs{
+    background-position: 80% 60%;
+}
+.bgss{
+    background-position: 40% 40%;
+}
+.bgm{
+    background-position: 100% 50%;
+}
+.bg5{
+    background-position: 80% 10%;
+}
