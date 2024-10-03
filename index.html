@@ -28,9 +28,21 @@
                                     <li><a class="flex py-[8px] px-[8px]  hover:bg-[#7373abcf] rounded-md justify-center items-center" href=""><i class="text-[23px]  icon-youtube-play"></i></a></li>
                                 </ul>
                             </div>
-                            <figure class="w-[50%] md:w-[20%] flex justify-end  items-center lg:hidden">
-                                <img class="w-[30%] md:w-[25%]" src="img/menu.svg" alt="">
-                            </figure>
+                            <div class="relative w-[20%] text-white flex md:hidden items-center justify-center pt-[20px]">
+                                <div class="z-50 ham absolute top-0  right-[-80%] cursor-pointer flex md:hidden  flex-wrap justify-center items-center w-[50px] h-[50px] ">
+                                    <span class="w-11/12 h-2 bg-white rounded transition transform origin-left"></span>
+                                    <span class="w-11/12 h-2 bg-white rounded  transition transform origin-left"></span>
+                                    <span class="w-11/12 h-2 bg-white rounded transition transform origin-left"></span>
+                                </div> 
+                                <ul id="menu" class="fixed top-0 left-0 w-[100%] h-[120vh] pt-[110px] transform translate-x-[-600px] transition *:cursor-pointer ">
+                                    <li class="hover:bg-[#6666a4] hover:text-white duration-[.4s] list-none w-full  h-16 border-b-2 flex justify-center items-center text-3xl bg-white text-black">ABOUT US</li>
+                                    <li class="hover:bg-[#6666a4] hover:text-white duration-[.4s] list-none w-full  h-16 border-b-2 flex justify-center items-center text-3xl bg-white text-black">DESTINATIONS</li>
+                                    <li class="hover:bg-[#6666a4] hover:text-white duration-[.4s] list-none w-full  h-16 border-b-2 flex justify-center items-center text-3xl bg-white text-black">BLOG</li>
+                                    <li class="hover:bg-[#6666a4] hover:text-white duration-[.4s] list-none w-full  h-16 border-b-2 flex justify-center items-center text-3xl bg-white text-black">RESERVATIONS</li>
+
+                                    <!-- Repeat the menu items as needed -->
+                                </ul>
+                            </div>
                             <nav class="hidden lg:flex lg:w-[60%] justify-center items-center ">
                                 <ul class="flex flex-wrap *:mx-[3px] *:text-14px *:font-osr">
                                     <li class=""><a class="flex py-[8px] px-[16px]  hover:bg-[#7373abcf] rounded-md justify-center items-center" href="">ABOUT US</a></li>
@@ -296,6 +308,30 @@
             <!-- my signature -->
         </div>
     </main>
+
 </body>
+<script>
+         let flag = 1;
+        const ham = document.querySelector('.ham');
+        const menu = document.getElementById('menu');
+
+        ham.addEventListener('click', function () {
+            menu.classList.toggle('translate-x-0');
+            const sp = this.children;
+
+            if (flag % 2) {
+                sp[1].style.transform = 'translateX(200px)';
+                sp[1].style.opacity = '0';
+                sp[0].style.transform = 'rotate(48deg)';
+                sp[2].style.transform = 'rotate(-45deg)';
+            } else {
+                sp[1].style.transform = 'translateX(0px)';
+                sp[1].style.opacity = '1';
+                sp[0].style.transform = 'rotate(0deg)';
+                sp[2].style.transform = 'rotate(0deg)';
+            }
+            flag++;
+        });
+</script>
 </html>
 

@@ -35,3 +35,6 @@
 .bg5{
     background-position: 80% 10%;
 }
+body{
+    scroll-behavior: smooth;
+}
